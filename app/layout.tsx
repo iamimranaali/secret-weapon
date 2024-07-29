@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Nunito } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/core/navbar";
+import { Home, MessageSquareCode, User } from "lucide-react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Nunito({ subsets: ["latin"],weight:['1000','900','800','700','600','500','400','300','200'] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +16,35 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+      icon: <Home className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "About",
+      link: "/about",
+      icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+      icon: (
+        <MessageSquareCode className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
+    },
+  ];
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <Navbar navItems={navItems}/>
+          
+          <main className="h-full w-full">
+            {children}
+       
+          </main>
+        </body>
     </html>
   );
 }
