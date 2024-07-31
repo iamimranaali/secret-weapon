@@ -1,62 +1,70 @@
-import Navbar from "@/components/core/navbar";
+import  { FloatingNav } from "@/components/core/navbar";
+import { StaticNav } from "@/components/core/static-nav";
 import Landing from "@/pages/landing";
-import { ArrowBigLeft, ArrowRight, ArrowRightFromLine, ChevronDown, Facebook, Instagram, LinkedinIcon, Mail, MessageCircleIcon } from "lucide-react";
+import { ArrowBigLeft, ArrowRight, ArrowRightFromLine, ChevronDown, Facebook, HomeIcon, Instagram, LinkedinIcon, Mail, MessageCircleIcon, MessageSquareCode, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+
   return (
-    <main className="h-full w-full  overflow-x-hidden">
+    <main className="h-full w-full ">
 
-    <section className="h-full md:h-screen w-full p-4 relative">
+<section className="h-full md:h-screen w-full p-4 relative">
     
-      <div className="h-full w-full flex flex-col justify-between   bg-black rounded-[40px] p-4">
-        <div className="flex flex-col justify-between gap-32 px-8 py-4">
-           {/* nav */}
-      <nav className="flex justify-between items-center">
-        <h1 className="font-bold text-white">LOGO_ <span className="text-purple-600">ON</span></h1>
-        <ul className="flex gap-8">
-          <li className="font-semibold text-white">home</li>
-          <li className="font-semibold text-white">products</li>
-          <li className="font-semibold text-white">contant</li>
-          <li className="font-semibold text-white">more</li>
-        </ul>
-      </nav>
-      {/* context */}
-      <div className="flex h-fit items-center">
-        <div className="w-full max-w-2xl space-y-4">
-            <h1 className="text-white text-6xl font-bold">The Future of Automated Trading is Here</h1>
-            <h4 className="text-white">We Have Developed and Automated More
-            Than 1000 Strategies
-            </h4>
-            <button className="px-6 py-3 rounded-2xl group hover:gap-8 transition-all duration-300 gap-3 flex items-center bg-white">
-            <span>Portfolio</span> <ArrowRight className="group-hover:-rotate-45 transition-all duration-300" size={16}/>
-          </button>
-          </div>
-      </div>
-        </div>
-     
-      {/* fotter */}
-      <div className="bg-white  rounded-[36px] p-4 w-full h-24">
-        <div className="w-full flex justify-between items-start max-w-xl mx-auto">
-        <Link href={'#'} className="p-4"><Instagram /></Link>
-        <Link href={'#'} className="p-4"><Facebook /></Link>
-        <Link href={'#'} className="p-4 font-semibold px-4 py-2 border rounded-2xl flex flex-col hover:bg-neutral-300 transition-colors duration-300 hover:border-neutral-500 group items-center justify-center"><span className="">Our products</span><ChevronDown  size={12} className="group-hover:animate-bounce transition-all duration-300"/></Link>
-        <Link href={'#'} className="p-4"><LinkedinIcon /></Link>
-        <Link href={'#'} className="p-4"><MessageCircleIcon /></Link>
-        </div>
-        
-      </div>
+    <div className="h-full w-full flex flex-col justify-between gap-8 md:gap-0  bg-black rounded-[40px] p-4">
+      <div className="flex flex-col justify-between gap-32 px-8 py-4">
+         {/* nav */}
+    <nav className=" hidden md:flex justify-between items-center  ">
+      <h1 className="font-bold text-white">LOGO_ <span className="text-purple-600">ON</span></h1>
+      <StaticNav color={'white'} />
 
+    </nav>
+    {/* context */}
+    <div className="flex h-fit items-center mt-8 md:mt-0">
+      <div className="w-full md:max-w-2xl space-y-4">
+          <h1 className="text-white text-2xl md:text-6xl font-bold ">The Future of Automated Trading is Here</h1>
+          <h4 className="text-white text-sm md:text-base">We Have Developed and Automated More
+          Than 1000 Strategies
+          </h4>
+          <button className="px-6 py-3 rounded-2xl group w-full sm:max-w-40 hover:gap-8 transition-all duration-300 gap-3 flex items-center bg-white">
+          <span>Portfolio</span> <ArrowRight className="group-hover:-rotate-45 transition-all duration-300" size={16}/>
+        </button>
+        </div>
+    </div>
+      </div>
+   
+    {/* fotter */}
+    <div className="bg-white  rounded-[36px] p-4 w-full h-24">
+      <div className="w-full flex justify-center md:justify-between items-center md:items-start max-w-xl mx-auto">
+      <Link href={'#'} className="p-4 hidden md:block"><Instagram /></Link>
+      <Link href={'#'} className="p-4 hidden md:block"><Facebook /></Link>
+      <Link href={'#'} className="p-4 font-semibold  rounded-xl py-2  flex flex-col border border-white hover:border-neutral-300 transition-colors duration-300 hover:border-neutral-500 group items-center justify-center"><span className="">Explore</span><ChevronDown  size={12} className="animate-bounce mt-2 transition-all duration-300"/></Link>
+      <Link href={'#'} className="p-4 hidden md:block"><LinkedinIcon /></Link>
+      <Link href={'#'} className="p-4 hidden md:block"><MessageCircleIcon /></Link>
+      </div>
       
-      </div>
- 
-    </section>
-    <section className="h-screen w-full p-4 relative">
+    </div>
     
-   <Landing/>
-
+    
+    </div>
+    <div className="w-full flex justify-center  items-center gap-4 mt-3 mx-auto">
+    <Link href={'#'} className="p-2 bg-black text-white rounded-lg hover:bg-black/80 transition-all duration-300 block md:hidden"><Instagram /></Link>
+      <Link href={'#'} className="p-2 bg-black text-white rounded-lg hover:bg-black/80 transition-all duration-300 block md:hidden"><Facebook /></Link>
+      <Link href={'#'} className="p-2 bg-black text-white rounded-lg hover:bg-black/80 transition-all duration-300 block md:hidden"><LinkedinIcon /></Link>
+      <Link href={'#'} className="p-2 bg-black text-white rounded-lg hover:bg-black/80 transition-all duration-300 block md:hidden"><MessageCircleIcon /></Link>
+      </div>
   </section>
+  <section className="h-screen w-full p-4 relative">
+  
+ <Landing/>
+
+</section>
+<section className="h-screen w-full p-4 relative">
+  
+  <Landing/>
+
+ </section>
     </main>
 
   );

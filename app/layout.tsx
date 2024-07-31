@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/core/navbar";
 import { Home, MessageSquareCode, User } from "lucide-react";
+import FloatingNavDemo from "./demo/page";
+import { FloatingNav } from "@/components/core/navbar";
+import Sidebar from "@/components/core/mobile-navbar";
 
 const inter = Nunito({ subsets: ["latin"],weight:['1000','900','800','700','600','500','400','300','200'] });
 
@@ -23,9 +25,26 @@ export default function RootLayout({
       icon: <Home className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "About",
+      name: "Our Portfolio",
       link: "/about",
       icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Our Products",
+      link: "/about",
+      icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "About Us",
+      link: "/about",
+      icon: <User className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Why Us",
+      link: "/contact",
+      icon: (
+        <MessageSquareCode className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
     },
     {
       name: "Contact",
@@ -36,10 +55,12 @@ export default function RootLayout({
     },
   ];
   return (
-    <html lang="en">
+    <html lang="en" className="no-scrollbar">
       <body className={inter.className}>
-      <Navbar navItems={navItems}/>
-          
+        <div className="hidden md:flex">
+      <FloatingNav navItems={navItems} />
+        </div>
+ <Sidebar/>          
           <main className="h-full w-full">
             {children}
        
