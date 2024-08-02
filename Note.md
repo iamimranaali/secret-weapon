@@ -4,3 +4,7 @@ mobile :  - text-2xl
 
 < md devices : - text-6xl
                -  text-base  
+
+colors 
+-black -- bold + dark + primary = text-neutral-900
+       -- p text + subtext + secondary = neutral-600

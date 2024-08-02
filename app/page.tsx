@@ -1,4 +1,4 @@
-import  { FloatingNav } from "@/components/core/navbar";
+import ImageOverlay from "@/components/core/ImageOverlay";
 import { StaticNav } from "@/components/core/static-nav";
 import Landing from "@/pages/landing";
 import { ArrowBigLeft, ArrowRight, ArrowRightFromLine, ChevronDown, Facebook, HomeIcon, Instagram, LinkedinIcon, Mail, MessageCircleIcon, MessageSquareCode, User } from "lucide-react";
@@ -12,8 +12,9 @@ export default function Home() {
 
 <section className="h-full md:h-screen w-full p-4 relative">
     
-    <div className="h-full w-full flex flex-col justify-between gap-8 md:gap-0  bg-black rounded-[40px] p-4">
-      <div className="flex flex-col justify-between gap-32 px-8 py-4">
+    <div className="h-full w-full relative flex flex-col justify-between gap-8 md:gap-0 overflow-hidden bg-black rounded-[40px]">
+      <ImageOverlay />
+      <div className="flex flex-col justify-between gap-32 px-8 py-4 z-10 m-4">
          {/* nav */}
     <nav className=" hidden md:flex justify-between items-center  ">
       <h1 className="font-bold text-white">LOGO_ <span className="text-purple-600">ON</span></h1>
@@ -35,7 +36,8 @@ export default function Home() {
       </div>
    
     {/* fotter */}
-    <div className="bg-white  rounded-[36px] p-4 w-full h-24">
+    <div className=" w-full h-28 z-10 px-4 pb-4" >
+      <div className="bg-white flex items-center h-full w-full rounded-[36px]">
       <div className="w-full flex justify-center md:justify-between items-center md:items-start max-w-xl mx-auto">
       <Link href={'#'} className="p-4 hidden md:block"><Instagram /></Link>
       <Link href={'#'} className="p-4 hidden md:block"><Facebook /></Link>
@@ -43,6 +45,8 @@ export default function Home() {
       <Link href={'#'} className="p-4 hidden md:block"><LinkedinIcon /></Link>
       <Link href={'#'} className="p-4 hidden md:block"><MessageCircleIcon /></Link>
       </div>
+      </div>
+    
       
     </div>
     
@@ -56,14 +60,10 @@ export default function Home() {
       </div>
   </section>
   <section className="h-screen w-full p-4 relative">
-  
  <Landing/>
-
 </section>
 <section className="h-screen w-full p-4 relative">
-  
   <Landing/>
-
  </section>
     </main>
 
