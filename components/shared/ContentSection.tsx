@@ -60,8 +60,8 @@ export default function ContentSection({
               {descriptions}
             </p>
           ): (
-            descriptions?.map((desc) => (
-              <p className="text-neutral-600 text-base md:text-sm xl:text-lg">
+            descriptions?.map((desc:any, idx: number) => (
+              <p key={idx} className="text-neutral-600 text-base md:text-sm xl:text-lg">
               {desc}
             </p>
             ))
@@ -124,8 +124,8 @@ export default function ContentSection({
               {descriptions}
             </p>
           ): (
-            descriptions?.map((desc) => (
-              <p className="text-neutral-600 text-base md:text-sm xl:text-lg">
+            descriptions?.map((desc: any,idx:number) => (
+              <p key={idx} className="text-neutral-600 text-base md:text-sm xl:text-lg">
               {desc}
             </p>
             ))

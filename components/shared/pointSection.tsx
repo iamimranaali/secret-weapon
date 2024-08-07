@@ -37,7 +37,7 @@ export default function PointSection() {
           <span className="h-1 w-12 bg-black rounded-xl" />  
         </div>  
         <p className="text-neutral-600 text-base md:text-sm xl:text-lg">
-              With over three years in the industry and a decade of trading expertise, our team specializes in crafting and implementing effective strategies using platforms such as Amibroker, Trading View and Python, MetaTrader. We create strategies for clients and set them to fully or semi-automatic mode, based on what they want. This means they don’t have to spend hours staring at the screen. By using automation, we take out human feelings from trading, making it more logical and less emotional.
+              With over three years in the industry and a decade of trading expertise, our team specializes in crafting and implementing effective strategies using platforms such as Amibroker, Trading View and Python, MetaTrader. We create strategies for clients and set them to fully or semi-automatic mode, based on what they want. This means they don't have to spend hours staring at the screen. By using automation, we take out human feelings from trading, making it more logical and less emotional.
         </p>
         <div className="grid sm:grid-cols-2 gap-6 sm:gap-4 mt-4">
   <div className="flex items-center gap-1 ">
