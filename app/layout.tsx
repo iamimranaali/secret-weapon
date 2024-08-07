@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Nunito } from "next/font/google";
 import "./globals.css";
 import { Home, MessageSquareCode, User } from "lucide-react";
-import FloatingNavDemo from "./demo/page";
 import { FloatingNav } from "@/components/core/navbar";
 import Sidebar from "@/components/core/mobile-navbar";
 import LenisScroll from "@/components/core/LenisScroll";

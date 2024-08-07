@@ -3,7 +3,7 @@ import { StaticNav } from "@/components/core/static-nav";
 import ContentSection from "@/components/shared/ContentSection";
 import NeedAssistant from "@/components/shared/need-assistant";
 import PointSection from "@/components/shared/pointSection";
-import { ArrowBigLeft, ArrowRight, ArrowRightFromLine, ChevronDown, Facebook, HomeIcon, Instagram, LinkedinIcon, Mail, MessageCircleIcon, MessageSquareCode, PhoneCall, PhoneForwarded, PhoneOutgoing, User } from "lucide-react";
+import {  ArrowRight, ChevronDown, Facebook, Instagram, LinkedinIcon, MessageCircleIcon, PhoneOutgoing } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

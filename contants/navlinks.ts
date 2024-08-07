@@ -36,4 +36,4 @@ import { BlendIcon,  Contact2, Home, Info, MessageSquareDiffIcon, User } from "l
   ];
 
 
-  export {navItems, navigationData}
+  export {navItems}

@@ -22,6 +22,8 @@ export default function ContentSection({
   button,
   content,
 }: contentSectionType) {  
+  const isArray = Array.isArray(descriptions);
+  const descriptionList = isArray ? descriptions : [descriptions];
   return (  
     <div className="h-fit mt-4 py-12 w-full flex flex-col items-center justify-center gap-8 lg:gap-20 md:flex-row mx-auto  ">  
       {
@@ -60,7 +62,7 @@ export default function ContentSection({
               {descriptions}
             </p>
           ): (
-            descriptions?.map((desc:any, idx: number) => (
+            descriptionList?.map((desc:any, idx: number) => (
               <p key={idx} className="text-neutral-600 text-base md:text-sm xl:text-lg">
               {desc}
             </p>
@@ -124,7 +126,7 @@ export default function ContentSection({
               {descriptions}
             </p>
           ): (
-            descriptions?.map((desc: any,idx:number) => (
+            descriptionList?.map((desc: any,idx:number) => (
               <p key={idx} className="text-neutral-600 text-base md:text-sm xl:text-lg">
               {desc}
             </p>

@@ -10,27 +10,25 @@ const ImageOverlay = () => {
     '/secret-3.png',  
   ];  
 
-  const containerStyle = {  
-    width: '100%',  
-    height: '100%',  
-    display: 'flex',  
-    alignItems: 'center',  
-    justifyContent: 'center',  
-    position: 'absolute', // Changed to relative for proper stacking  
-    overflow: 'hidden', // Ensure no overflow  
-  };  
-
-  // Manage image cycling via effect  
+ 
   useEffect(() => {  
     const intervalId = setInterval(() => {  
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);  
-    }, 4000); // Change image every 4 seconds  
+    }, 4000); 
 
     return () => clearInterval(intervalId);  
   }, [images.length]);  
 
   return (  
-    <div style={containerStyle}>  
+    <div style={ {  
+      width: '100%',  
+      height: '100%',  
+      display: 'flex',  
+      alignItems: 'center',  
+      justifyContent: 'center',  
+      position: 'absolute', 
+      overflow: 'hidden', 
+    }}>  
       {images.map((image, index) => (  
         <motion.img  
           key={index}  
@@ -39,12 +37,12 @@ const ImageOverlay = () => {
             position: 'absolute',  
             width: '100%',  
             height: '100%',  
-            objectFit: 'cover', // Ensure images cover their container  
+            objectFit: 'cover', 
           }}  
-          initial={{ opacity: 0 }} // start off invisible  
+          initial={{ opacity: 0 }}
           animate={{  
-            opacity: index === currentImage ? 1 : 0, // Fade in/out based on current index  
-            transition: { duration: 3.5 }, // Duration of the fade  
+            opacity: index === currentImage ? 1 : 0,
+            transition: { duration: 3.5 }, 
           }}  
         />  
       ))}  
