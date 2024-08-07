@@ -1,3 +1,5 @@
+rounded - main = rounded-[40px]
+
 ## text sizes
 mobile :  - text-2xl
           - text-sm

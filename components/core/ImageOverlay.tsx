@@ -44,7 +44,7 @@ const ImageOverlay = () => {
           initial={{ opacity: 0 }} // start off invisible  
           animate={{  
             opacity: index === currentImage ? 1 : 0, // Fade in/out based on current index  
-            transition: { duration: 1.5 }, // Duration of the fade  
+            transition: { duration: 3.5 }, // Duration of the fade  
           }}  
         />  
       ))}  

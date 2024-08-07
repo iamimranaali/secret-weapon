@@ -5,6 +5,8 @@ import { Home, MessageSquareCode, User } from "lucide-react";
 import FloatingNavDemo from "./demo/page";
 import { FloatingNav } from "@/components/core/navbar";
 import Sidebar from "@/components/core/mobile-navbar";
+import LenisScroll from "@/components/core/LenisScroll";
+import Footer from "@/components/core/footer";
 
 const inter = Nunito({ subsets: ["latin"],weight:['1000','900','800','700','600','500','400','300','200'] });
 
@@ -57,14 +59,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="no-scrollbar">
       <body className={inter.className}>
-        <div className="hidden md:flex">
-      <FloatingNav navItems={navItems} />
-        </div>
- <Sidebar/>          
+          <LenisScroll />
+            <div className="hidden md:flex">
+              <FloatingNav navItems={navItems} />
+            </div>
+          <Sidebar/>          
           <main className="h-full w-full">
             {children}
-       
           </main>
+          <Footer/>
         </body>
     </html>
   );
