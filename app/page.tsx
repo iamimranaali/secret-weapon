@@ -62,6 +62,7 @@ export default function Home() {
       </div>
   </section>
  {/* <Landing/> */}
+ <section className="h-80 w-full"></section>
   <ContentSection 
   content="left"
   SuperTitle="one-stop solution"
@@ -93,6 +94,15 @@ export default function Home() {
       </div>
     </article>
   </section>
+  <ContentSection 
+  content="right"
+  SuperTitle="one-stop solution"
+  title={"Welcome to Secret Weapon Trading Solutions"}
+  subTitle={"Where we automate your strategies"}
+  descriptions={["We are dedicated to providing our clients with the most effective and innovative trading solutions."," With over three years of experience in the industry and over a decade of experience in trading our team of experts specializes in developing and implementing trading strategies using platforms such as Amibroker and Trading view."]}
+  image={"/quotestream_desktop_and_mobile.png"}
+  button={"Read More"}
+  />
 
   <PointSection />
   <NeedAssistant/>

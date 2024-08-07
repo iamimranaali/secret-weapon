@@ -9,22 +9,8 @@ export default function PointSection() {
   return (  
     <div className="h-fit mt-4 py-12 w-full flex  flex-col items-center justify-center gap-8 lg:gap-20 md:flex-row mx-auto  ">  
   
-      <motion.div  
-        className="relative  flex-1  h-auto md:min-w-[400px] lg:min-w-[400px] md:max-w-[500px] mt-12 p-8  aspect-square w-full bg-contain"  
-        variants={fadeIn("right", 0.3)}  
-        initial="inactive"  
-        whileInView="active"  
-        viewport={{ once: true }}  
-      >  
-        <Image  
-          src={'/phone-image.png'}  
-          alt="stock-pc-image"  
-          className="object-contain"  
-          fill  
-        />  
-      </motion.div>  
-   
-          <motion.article  
+    
+          <motion.div  
         variants={fadeIn("left", 0.3)}  
         initial="inactive"  
         whileInView="active"  
@@ -39,7 +25,7 @@ export default function PointSection() {
         <p className="text-neutral-600 text-base md:text-sm xl:text-lg">
               With over three years in the industry and a decade of trading expertise, our team specializes in crafting and implementing effective strategies using platforms such as Amibroker, Trading View and Python, MetaTrader. We create strategies for clients and set them to fully or semi-automatic mode, based on what they want. This means they don&apos;t have to spend hours staring at the screen. By using automation, we take out human feelings from trading, making it more logical and less emotional.
         </p>
-        <div className="grid sm:grid-cols-2 gap-6 sm:gap-4 mt-4">
+        {/* <div className="grid sm:grid-cols-2 gap-6 sm:gap-4 mt-4">
   <div className="flex items-center gap-1 ">
         <ChartScatter size={32}  className="font-semibold p-1 fill-green-400"/>
       <p>Developer rendered in it</p>
@@ -64,9 +50,24 @@ export default function PointSection() {
     <HomeIcon size={32}  className="font-semibold p-1 fill-green-400"/>
       <p>Developer rendered in it</p>
     </div>
-  </div>
+  </div> */}
+    <motion.div  
+        className="relative  flex-1  h-auto md:min-w-[400px] lg:min-w-[400px] md:max-w-[500px] mt-12 p-8  aspect-square w-full bg-contain"  
+        variants={fadeIn("right", 0.3)}  
+        initial="inactive"  
+        whileInView="active"  
+        viewport={{ once: true }}  
+      >  
+        <Image  
+          src={'/phone-image.png'}  
+          alt="stock-pc-image"  
+          className="object-contain"  
+          fill  
+        />  
+      </motion.div>  
+   
   
-      </motion.article> 
+      </motion.div> 
     </div>  
   )  
 }
