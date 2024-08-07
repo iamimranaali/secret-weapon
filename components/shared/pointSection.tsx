@@ -7,7 +7,7 @@ import { ChartScatter, Home, HomeIcon } from 'lucide-react'
 
 export default function PointSection() {  
   return (  
-    <div className="h-fit mt-8 md:mt-4 py-12 w-full flex  flex-col items-center justify-center gap-8 lg:gap-20 md:flex-row mx-auto  ">  
+    <div className="h-fit mt-8 md:mt-4 py-12 w-full flex  flex-col items-center justify-center gap-8 lg:gap-20 md:flex-row mx-auto overflow-hidden ">  
   
       <motion.div  
         className="relative  flex-1  h-auto md:min-w-[400px] lg:min-w-[400px] md:max-w-[500px]  p-8  aspect-square w-full bg-contain"  

@@ -72,7 +72,7 @@ export default function Home() {
   button={"Read More"}
   />
 
-  <section className="h-full bg w-full flex flex-col items-center justify-center relative">
+  <section className="h-full bg w-full flex flex-col items-center justify-center relative overflow-hidden">
     <span className="text-5xl md:text-8xl font-[1000] bg-[url('/secret-3.png')] text-center bg-clip-text mb-4 text-transparent">We are here</span>
     <article className="w-[90%] h-full bg-black rounded-[40px] overflow-hidden px-8 pt-8  space-y-6 ">
       <h3 className="text-2xl md:text-5xl font-bold text-neutral-50 text-center mx-auto max-w-4xl">Want to develop, back-test or automate your strategy?</h3>
