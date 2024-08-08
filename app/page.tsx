@@ -1,8 +1,12 @@
 import ImageOverlay from "@/components/core/ImageOverlay";
 import { StaticNav } from "@/components/core/static-nav";
+import CallToAction from "@/components/shared/CallToAction";
 import ContentSection from "@/components/shared/ContentSection";
+import NumberCounters from "@/components/shared/counter";
 import NeedAssistant from "@/components/shared/need-assistant";
 import PointSection from "@/components/shared/pointSection";
+import ProductSection from "@/components/shared/ProductSection";
+import { CarouselSpacing } from "@/components/shared/Testimonials";
 import {  ArrowRight, ChevronDown, Facebook, Instagram, LinkedinIcon, MessageCircleIcon, PhoneOutgoing } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,9 +14,9 @@ import Link from "next/link";
 export default function Home() {
 
   return (
-    <main className="h-full w-full ">
+    <main className="h-full w-full px-4">
 
-<section className="h-full md:h-screen w-full p-4 mt-4 md:mt-0 relative">
+<section className="h-[80vh] md:h-screen p-4 w-full mt-4 md:mt-0 relative">
     
     <div className="h-full w-full relative flex flex-col justify-between gap-8 md:gap-0 overflow-hidden bg-black rounded-[40px]">
       <ImageOverlay />
@@ -72,9 +76,9 @@ export default function Home() {
   button={"Read More"}
   />
 
-  <section className="h-full bg w-full flex flex-col items-center justify-center relative overflow-hidden">
+  <section className="h-full  w-full flex flex-col items-center justify-center relative overflow-hidden">
     <span className="text-5xl md:text-8xl font-[1000] bg-[url('/secret-3.png')] text-center bg-clip-text mb-4 text-transparent">We are here</span>
-    <article className="w-[90%] h-full bg-black rounded-[40px] overflow-hidden px-8 pt-8  space-y-6 ">
+    <article className="w-full md:w-[90%] h-full bg-black rounded-[40px] overflow-hidden px-8 pt-8  space-y-6 ">
       <h3 className="text-2xl md:text-5xl font-bold text-neutral-50 text-center mx-auto max-w-4xl">Want to develop, back-test or automate your strategy?</h3>
       <div className="flex gap-3 items-center justify-center ">
       <PhoneOutgoing  className="text-white"/>
@@ -94,8 +98,21 @@ export default function Home() {
     </article>
   </section>
 
-  
   <PointSection />
+  <ProductSection />
+  <CallToAction/>
+  
+  <div className="w-full sm:max-w-7xl mx-auto py-16 px-12 gap-16 md:gap-3 flex flex-col md:flex-row ">
+  <NumberCounters timer={{from: 300, to:500, title: 'Clients'} }/>
+  <NumberCounters timer={{from: 900, to:1200, title: "Projects"} }/>
+  <NumberCounters timer={{from: 2, to:6, title:"Techs"}}/>
+
+  </div>
+
+  <div className="flex items-center justify-center">
+
+  <CarouselSpacing />
+  </div>
   <NeedAssistant/>
   {/* <section className="h-40 w-52"></section> */}
     </main>

@@ -29,7 +29,7 @@ export default function PointSection() {
         initial="inactive"  
         whileInView="active"  
         viewport={{ once: true }}  
-        className=" flex-1 flex flex-col mt-12 md:mt-0 max-w-2xl w-full p-4  gap-4"  
+        className=" flex-1 flex flex-col mt-12 md:mt-0 max-w-2xl w-full py-4  gap-4"  
       >  
         <div className="relative w-fit flex flex-col">  
           <span className="group-hover:w-12 group-hover:opacity-100 h-1 opacity-0 w-0 transition-all duration-300 bg-black rounded-xl self-end" />  
