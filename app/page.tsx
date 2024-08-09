@@ -17,7 +17,12 @@ export default function Home() {
       <div className="flex flex-col justify-between gap-32 px-8 py-4 z-10 m-4">
          {/* nav */}
     <nav className=" hidden md:flex justify-between items-center  ">
-      <h1 className="font-bold text-white">LOGO_ <span className="text-purple-600">ON</span></h1>
+     <Image
+     src="/logo.png"
+     height={100}
+     width={100}
+     alt="Logo Image"
+     />
       <StaticNav color={'white'} />
 
     </nav>
